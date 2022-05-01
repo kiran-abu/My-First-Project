@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <!-- <link href="public/newui/css/sb-admin-2.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="public/newui/virtual-select-master/dist/virtual-select.min.css"/>
+ <script src="public/newui/virtual-select-master/dist/virtual-select.min.js"></script> -->
+<style>
+
+.row.justify-content-center {
+    margin-top: 165px;
+    display: none;
+}
+.nav1 {
+    width: 100%;
+    padding: 25px;
+    margin-left: 5px;
+}
+body.bg-gradient-primary.modal-open {
+    padding-right: 0px;
+    overflow: auto;
+}
+  thead tr:nth-child(1) th {
+    overflow: auto;
+    background: #93b2f1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+	border: 1px solid #d1d3e2;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #e3e6f0;
+    width: auto;
+}
+.row {
+    margin-right: 0px;
+}
+.table .thead-dark th {
+    color: #fff;
+    background-color: #93b3eb;
+    border-color: #ffffff;
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    margin-top: -7px;
+}
+#wrapper {
+    display: flex;
+    width: -webkit-fill-available;
+}
+input[type=text], textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.card1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+  
+}
+
+thead {
+    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0;
+    background: linear-gradient(to right, #93aefb 0%, #92c7b4 100%);
+    color: #fff;
+}
+.table-dark {
+		color: #fff;
+		background-color: transparent;
+		border: 1px solid #928f8f;
+	}
+p.tdcla {
+    width: 100%;
+    word-break: break-all;
+}
+.table-responsive {
+    height: auto;
+}
+.modal-open .modal {
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+.sidebar .nav-item .nav-link span {
+    font-size: .85rem;
+    display: inline;
+    opacity: 1;
+    color: #fff;
+}
+
+
+.zui-table {
+    border: 1px solid #e3e6f0; 
+    border-right: solid 1px #DDEFEF;
+    border-collapse: separate;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+    padding: 0px;
+    border-radius: 6px;
+}
+.zui-table thead th {
+  
+    border: none;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+   
+    white-space: nowrap;
+}
+.zui-table tbody td {
+    border: solid 1px #d1d3e2;
+    color: #000;
+    padding: 10px;
+    background: #fff;
+    white-space: nowrap;
+}
+
+.zui-wrapper {
+    position: relative;
+}
+.zui-scroller {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: 5px;
+    
+}
+.zui-table .zui-sticky-col  {
+   
+    left: 0;
+    position: sticky;
+    top: auto;
+    width: 120px;
+}
+
+.zui-table .zui-sticky-col1 {
+  
+    left: 65px;
+    position: sticky;
+    top: auto;
+    width: 120px;
+}
+
+.zui-table .zui-sticky-col2  {
+  
+    left: 0;
+    position: sticky;
+    top: auto;
+    width: 120px;
+	background: #93aefa;
+}
+
+.zui-table .zui-sticky-col3 {
+  
+    left: 65px;
+    position: sticky;
+    top: auto;
+    width: 120px;
+	background: #93aefa;
+}
+.vscomp-ele {
+    display: inline-block;
+    width: 100%;
+    max-width: 324px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="row">
+    <marquee direction="left" style="color:darkred">WELCOME TO ADMIN</marquee>
+</div>
+<div class="row">
+    
+    <div class="col-sm-6" >
+        <button class="btn-success" id="listallusers">List All Users</button>
+    </div>
+    
+    <div class="col-sm-6">
+        <button class="btn-success" id="listallclicks">List All clicks</button>
+    </div>
+</div>
+<div class="row"></div>
+<div class="row" style="color:darkmagenta">
+    <div class="col-sm-4" id="AllUsers"></div>
+</div>
+
+<div class="row">
+</div>
+<div class="row"></div>
+<div class="row" style="color:darkmagenta">
+    <div class="col-sm-4" id="AllClicks"></div>
+</div>
+
+<div class="row">
+</div>
+</body>
+<!-- <script src="./index.js"></script> -->
+<script src="/public/views/admin/admin.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+</html>

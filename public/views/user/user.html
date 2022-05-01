@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <!-- <link href="public/newui/css/sb-admin-2.min.css" rel="stylesheet"> -->
+ <!-- <link rel="stylesheet" href="public/newui/virtual-select-master/dist/virtual-select.min.css"/> -->
+ <!-- <script src="public/newui/virtual-select-master/dist/virtual-select.min.js"></script> -->
+ 
+<style>
+.navbar-fixed-bottom, .navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.row.justify-content-center {
+    margin-top: 165px;
+    display: none;
+}
+.nav1 {
+    width: 100%;
+    padding: 25px;
+    margin-left: 5px;
+}
+body.bg-gradient-primary.modal-open {
+    padding-right: 0px;
+    overflow: auto;
+}
+  thead tr:nth-child(1) th {
+    overflow: auto;
+    background: #93b2f1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+	border: 1px solid #d1d3e2;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #e3e6f0;
+    width: auto;
+}
+.row {
+    margin-right: 0px;
+}
+.table .thead-dark th {
+    color: #fff;
+    background-color: #93b3eb;
+    border-color: #ffffff;
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    margin-top: -7px;
+}
+#wrapper {
+    display: flex;
+    width: -webkit-fill-available;
+}
+input[type=text], textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.card1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+  
+}
+
+thead {
+    border-radius: calc(.35rem - 1px) calc(.35rem - 1px) 0 0;
+    background: linear-gradient(to right, #93aefb 0%, #92c7b4 100%);
+    color: #fff;
+}
+.table-dark {
+		color: #fff;
+		background-color: transparent;
+		border: 1px solid #928f8f;
+	}
+p.tdcla {
+    width: 100%;
+    word-break: break-all;
+}
+.table-responsive {
+    height: auto;
+}
+.modal-open .modal {
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+.sidebar .nav-item .nav-link span {
+    font-size: .85rem;
+    display: inline;
+    opacity: 1;
+    color: #fff;
+}
+
+
+.zui-table {
+    border: 1px solid #e3e6f0; 
+    border-right: solid 1px #DDEFEF;
+    border-collapse: separate;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+    padding: 0px;
+    border-radius: 6px;
+}
+.zui-table thead th {
+  
+    border: none;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+   
+    white-space: nowrap;
+}
+.zui-table tbody td {
+    border: solid 1px #d1d3e2;
+    color: #000;
+    padding: 10px;
+    background: #fff;
+    white-space: nowrap;
+}
+
+.zui-wrapper {
+    position: relative;
+}
+.zui-scroller {
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: 5px;
+    
+}
+.zui-table .zui-sticky-col  {
+   
+    left: 0;
+    position: sticky;
+    top: auto;
+    width: 120px;
+}
+
+.zui-table .zui-sticky-col1 {
+  
+    left: 65px;
+    position: sticky;
+    top: auto;
+    width: 120px;
+}
+
+.zui-table .zui-sticky-col2  {
+  
+    left: 0;
+    position: sticky;
+    top: auto;
+    width: 120px;
+	background: #93aefa;
+}
+
+.zui-table .zui-sticky-col3 {
+  
+    left: 65px;
+    position: sticky;
+    top: auto;
+    width: 120px;
+	background: #93aefa;
+}
+.vscomp-ele {
+    display: inline-block;
+    width: 100%;
+    max-width: 324px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+    <div class="row">
+       <h1 style="font-style: oblique;color:darkorchid;"><marquee direction="right">WELCOME TO USER</marquee></h1>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-primary" id="post">POST</button>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-primary" id="get"> GET</button>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 1%;">
+        <div id="clearforButtons">
+            <!-- <h1>Clear me when click on post/get</h1> -->
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div id="appendforButtons">
+            
+        </div>
+    </div> -->
+
+</body>
+<script type="text/html" id="Post-temp">
+    <div class="row" style="margin-top: 2%;">
+        <div class="col-sm-6"></div>
+        <div class="col-sm-4"></div>
+
+        <div class="col-sm-6">
+            <button class="btn btn-warning" id="addclick">Add Click</button>
+            <div class="row" style="margin-top: 2%;">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-4"></div>
+        
+            <div class="col-sm-6" id="addclickDiv">
+                <!-- <h1>Clear me when click on Addclick</h1> -->
+            </div>
+        </div>
+
+    </div>
+</script>
+
+<script type="text/html" id="AddClick-temp">
+    <div class="row" style="margin-top:2%;">
+    
+    <div class="panel-header"><center><b>ADD CLICKS</b></center></div>
+        <div class="panel-body">
+            <label for="keyword"><b>Key Word</b></label>
+            <input type="text" height="500px" id="keyword" name="keyword">
+        </div>
+
+        <div class="panel-body">
+            <label for="link"><b>Link</b></label>
+            <input type="text" height="500px" id="link" name="link">
+        </div>
+
+        <div class="panel-body">
+            <b>Modality<b>
+            <select id="modality" height="500px">
+                <option value="select">Select</option>
+                <option value="XRAY">XRAY</option>
+                <option value="ULTRASOUND">ULTRASOUND</option>
+                <option value="CT">CT</option>
+                <option value="MRI">MRI</option>
+            </select>
+        </div>
+
+        <div class="panel-body">
+            <label for="bodypart"><b>Body Part</b></label>
+            <input type="text" height="500px" id="bodypart" name="bodypart">
+        </div>
+
+        <div class="">
+            <b>Other Keywords</b>
+            <div class="panel-body">
+                <label for="other keywords"><b>Key Word</b></label>
+                <input type="text" height="500px" id="other keywords" name="other keywords">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div id="AddNew"></div>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <button class="btn btn-danger" id="addfield">+</button>
+            </div>
+        </div>
+</script>
+   
+    
+<script src="../public/views/user/user.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+<!-- <link rel="stylesheet" href="/css/style.css">  -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<script src="public/localstorage.js"></script>
+</html>
